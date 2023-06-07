@@ -5,29 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-        }
-        html,body{
-            height: 100%
-        }
-        .list-box{
-            padding: 0 20%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;   
-        }
-        .list-head{
-            height: 90px;
-            line-height: 90px;
-        }
-        .border{
-            width: 100%;
-            border: 2px solid rgba(244, 244, 244, 0.823);
-        }
-    </style>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
     <div class="list-box">
@@ -35,19 +13,19 @@
             <h1>添加记录</h1>
         </div>
         <div class="border"></div>
-        <div>
+        <div class="form-box">
             <form action="" method="post">
                 <span>事项</span><br>
-                <input type="text" class="form-item">
+                <input type="text" class="form-item" name="obj">
                 <span>发生时间</span><br>
-                <input type="text" class="form-item">
+                <input type="text" class="form-item" name="time">
                 <span>类型</span><br>
-                <input type="text" placeholder="类型" class="form-item">
+                <input type="text" placeholder="类型" name="type" class="form-item">
                 <span>金额</span><br>
-                <input type="text" class="form-item">
+                <input type="text" class="form-item" name="money">
                 <span>备注</span><br>
-                <input type="text" class="form-item">
-                <button class="btn">添加</button>
+                <input type="text" class="form-item" name="tip">
+                <button id="submit">确认添加</button>
             </form>
         </div>
     </div>

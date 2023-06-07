@@ -1,13 +1,28 @@
 var express = require('express');
 var router = express.Router();
 
+//导入lowdb
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync');
+const shortid = require('shortid');
+const adapter = new FileSync(__dirname + '/../data/db.json')
+const db = low(adapter)
+// const shortid = require('shortid')
+
 //记账本列表
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/record', function(req, res, next) {
+  res.render('record');
 });
 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get('/table', function(req, res, next) {
+  res.render('table');
 });
+
+router.post('/record',(req,res)=>{
+  let id = shortid.generate()
+  // console.log(req.body);
+  db.get('accounts').unshift({id:id,...req.body}).write()
+  res.send('表单提交')
+})
 
 module.exports = router;

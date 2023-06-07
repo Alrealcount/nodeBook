@@ -24,7 +24,7 @@
             height: 90px;
             line-height: 90px;
             font-size: 20px;
-            color: blueviolet;
+            color: rgb(5, 1, 10);
         }
         .border{
             width: 100%;
@@ -47,6 +47,18 @@
             padding-left: 10px;
             box-sizing: border-box;
         }
+        #submit{
+            border-radius: 6px;
+            margin-top: 20px;
+            border: 1px solid rgb(5, 119, 150);
+            width: 100%;
+            height: 35px;
+            color: rgb(123, 2, 150);
+            font-size: 18px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 600;
+            background-color: rgba(162, 233, 223, 0.451);
+        }
     </style>
 </head>
 <body>
@@ -58,16 +70,16 @@
         <div class="form-box">
             <form action="" method="post">
                 <span>事项</span><br>
-                <input type="text" class="form-item">
+                <input type="text" class="form-item" name="obj">
                 <span>发生时间</span><br>
-                <input type="text" class="form-item">
+                <input type="text" class="form-item" name="time">
                 <span>类型</span><br>
-                <input type="text" placeholder="类型" class="form-item">
+                <input type="text" placeholder="类型" name="type" class="form-item">
                 <span>金额</span><br>
-                <input type="text" class="form-item">
+                <input type="text" class="form-item" name="money">
                 <span>备注</span><br>
-                <input type="text" class="form-item">
-                <button class="btn">添加</button>
+                <input type="text" class="form-item" name="tip">
+                <button id="submit">确认添加</button>
             </form>
         </div>
     </div>
