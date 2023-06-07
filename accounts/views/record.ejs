@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%
+        }
+        .list-box{
+            padding: 0 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;   
+        }
+        .list-head{
+            height: 90px;
+            line-height: 90px;
+        }
+        .border{
+            width: 100%;
+            border: 2px solid rgba(244, 244, 244, 0.823);
+        }
+    </style>
+</head>
+<body>
+    <div class="list-box">
+        <div class="list-head">
+            <h1>添加记录</h1>
+        </div>
+        <div class="border"></div>
+        <div>
+            <form action="" method="post">
+                <span>事项</span><br>
+                <input type="text" class="form-item">
+                <span>发生时间</span><br>
+                <input type="text" class="form-item">
+                <span>类型</span><br>
+                <input type="text" placeholder="类型" class="form-item">
+                <span>金额</span><br>
+                <input type="text" class="form-item">
+                <span>备注</span><br>
+                <input type="text" class="form-item">
+                <button class="btn">添加</button>
+            </form>
+        </div>
+    </div>
+    <script>
+
+    </script>
+</body>
+</html>
