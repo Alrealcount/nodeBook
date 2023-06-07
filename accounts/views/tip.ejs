@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <style>
+        .tip-box{
+            margin-top: 10%;
+            width: 100%;
+            height: 200px;
+            background-color: rgba(11, 251, 171, 0.336);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+            border-radius: 16px;
+        }
+        .tip-box span{
+            font-size: 80px;
+            font-weight: 600;
+            color: rgb(88, 1, 211);
+            transform: translateY(-20px);
+        }
+        .tip-box a{
+            font-size: 18px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="list-box tip-add">
+        <div class="tip-box">
+            <span>:)</span>
+            <a href="<%= url %>"><%= msg %>~点击跳转页面</a>
+        </div>
+    </div>
+</body>
+</html>

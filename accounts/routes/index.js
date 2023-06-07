@@ -22,7 +22,7 @@ router.post('/record',(req,res)=>{
   let id = shortid.generate()
   // console.log(req.body);
   db.get('accounts').unshift({id:id,...req.body}).write()
-  res.send('表单提交')
+  res.render('tip',({msg:'添加事项成功',url:'/accounts/record'}))
 })
 
 module.exports = router;

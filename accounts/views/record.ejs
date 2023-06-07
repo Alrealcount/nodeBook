@@ -18,13 +18,17 @@
                 <span>事项</span><br>
                 <input type="text" class="form-item" name="obj">
                 <span>发生时间</span><br>
-                <input type="text" class="form-item" name="time">
+                <input type="date" class="form-item" name="time" value="2023-06-07">
                 <span>类型</span><br>
-                <input type="text" placeholder="类型" name="type" class="form-item">
+                <select class="form-item" name="type">
+                    <option value="支出">支出</option>
+                    <option value="收入">收入</option>
+                </select>
                 <span>金额</span><br>
                 <input type="text" class="form-item" name="money">
                 <span>备注</span><br>
-                <input type="text" class="form-item" name="tip">
+                <textarea rows="3" class="form-item text-last" name="tip"></textarea>
+                <!-- <input type="text" class="form-item" name="tip"> -->
                 <button id="submit">确认添加</button>
             </form>
         </div>

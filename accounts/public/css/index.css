@@ -39,6 +39,9 @@ html,body{
     padding-left: 10px;
     box-sizing: border-box;
 }
+.text-last{
+    height: 105px;
+}
 #submit{
     border-radius: 6px;
     margin-top: 20px;
