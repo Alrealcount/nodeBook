@@ -4,9 +4,111 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Accounts</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+        }
+        .account{
+            width: 100%;
+            padding: 0 30%;
+            box-sizing: border-box;
+        }
+        .account-head{
+            padding: 20px 0;
+        }
+        .border{
+            width: 100%;
+            border: 1px solid rgb(232, 230, 230);
+        }
+        .account-main{
+            width: 100%;
+        }
+        .main-item{
+            height: 100px;
+            border-radius: 8px;
+            margin-top: 30px;
+            /* background-color: rgb(255, 255, 255); */
+            overflow: hidden;
+            border: 1px solid rgb(3, 3, 3);
+        }
+        .item-head{
+            height: 40px;
+            background-color: rgba(69, 243, 38, 0.622);
+            line-height: 40px;
+            padding: 0 20px;
+        }
+        .item-main{
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+        .item-branch{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+        .item-left{
+            width: 50%;
+            overflow: hidden;
+        }
+        .item-span{
+            margin-right: 80px;
+        }
+        .item-span span{
+            padding: 3px;
+            border-radius: 3px;
+            color: white;
+            /* font-weight: 600; */
+        }
+        .span-suceess{
+            border: 1px solid rgba(0, 128, 0, 0.47);
+            background-color: rgba(1, 233, 67, 0.94);
+        }
+        .span-warning{
+            border: 1px solid rgba(216, 227, 0, 0.47);
+            background-color: rgba(230, 191, 0, 0.94);
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="account">
+        <div class="account-head">
+            <h1>账户记录</h1>
+        </div>
+        <div class="border">
+            
+        </div>
+        <div class="account-main">
+            <% accounts.forEach(item=>{ %>
+            <div class="main-item">
+                <div class="item-head">
+                    <span><%= item.time %></span>
+                </div>
+                <div class="item-main">
+                    <div class="item-branch item-left">
+                        <p><%= item.obj %></p>
+                    </div>
+                    <div class="item-branch item-span">
+                        <span class="<%= item.type === '支出'?'span-warning':'span-suceess' %>"><%= item.type %></span>
+                    </div>
+                    <div class="item-branch item-right">
+                        <span><%= item.money %>元</span>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        
+    </div>
+    <script>
+
+    </script>
 </body>
 </html>
