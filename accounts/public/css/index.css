@@ -17,6 +17,17 @@ html,body{
     line-height: 90px;
     font-size: 20px;
     color: rgb(5, 1, 10);
+    display: flex;
+
+}
+.head-a{
+    position: absolute;
+    right: calc(20% + 5px);
+    font-size: 14px;
+    transform: translateY(20px);
+}
+.head-a span{
+    
 }
 .border{
     width: 100%;

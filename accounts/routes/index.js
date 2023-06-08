@@ -24,6 +24,13 @@ router.get('/accounts',(req,res)=>{
   res.render('accounts',{accounts:accounts})
 })
 
+router.get('/accounts/:id',(req,res)=>{
+  let id = req.params.id;
+  db.get('accounts').remove({id:id}).write()
+
+  res.send('删除成功')
+})
+
 router.post('/record',(req,res)=>{
   let id = shortid.generate()
   // console.log(req.body);

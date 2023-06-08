@@ -75,6 +75,18 @@
             border: 1px solid rgba(216, 227, 0, 0.47);
             background-color: rgba(230, 191, 0, 0.94);
         }
+        .btn-cls{
+            margin: 20px 0;
+            width: 100%;
+            height: 30px;
+        }
+        #btn{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            font-size: 18px;
+
+        }
     </style>
 </head>
 <body>
@@ -101,11 +113,16 @@
                     <div class="item-branch item-right">
                         <span><%= item.money %>元</span>
                     </div>
+                    <div class="item-branch item-del">
+                        <a href="./accounts/<%= item.id %>"><span>X</span></a>
+                    </div>
                 </div>
             </div>
             <% }) %>
         </div>
-        
+        <div class="btn-cls">
+            <a href="./record"><button id="btn">返回创建事项栏</button></a>
+        </div>
     </div>
     <script>
 
